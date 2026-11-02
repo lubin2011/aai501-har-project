@@ -7,7 +7,7 @@ AAI 501, University of San Diego. Instructor: David Friesen.
 | Name | Contribution |
 |---|---|
 | Francois Lubin | (to be filled in) |
-| Lernik Avetisyan | (to be filled in) |
+| Lernik Avetisyan | PCA, K-Means and Ward hierarchical clustering, cluster-distance classification, and participant-aware validation |
 | Alex Denbaugh | (to be filled in) |
 
 We compare classification, clustering, and feature selection methods for recognizing six
@@ -39,6 +39,11 @@ smartphone accelerometer and gyroscope features.
 |---|---|
 | `01_baseline_models.ipynb` | Data checks; baseline logistic regression, k-NN, SVM, random forest, gradient boosting; confusion matrices |
 | `02_tuning_and_feature_selection.ipynb` | Volunteer-wise tuning (GroupKFold); accuracy per test volunteer; random forest feature ranking with and without removing correlated features; accuracy vs. number of features |
+| `03_clustering_and_pca.ipynb` | PCA (90% variance), K-Means and Ward clustering, moving/stationary grouping, held-out participant evaluation, and cluster-distance classification |
+
+### Running the PCA and clustering notebook
+
+`03_clustering_and_pca.ipynb` is designed for Google Colab. It downloads and extracts the official UCI HAR dataset automatically into `/content/uci_har`, rather than using the repository's `data/` directory. Open it in Colab and run the cells in order. The notebook installs and verifies `scikit-learn==1.8.0`; its saved results were generated in that environment. SciPy is also required for hierarchical clustering and is listed in `requirements.txt`.
 
 ## Baseline results (9 unseen test volunteers)
 
@@ -60,6 +65,19 @@ smartphone accelerometer and gyroscope features.
 | 561 (all) | 95.0% | 95.0% |
 
 "Decorrelated" skips any feature with |correlation| > 0.8 to one already selected.
+
+## PCA and clustering results (9 held-out test volunteers where applicable)
+
+| Analysis | Result |
+|---|---|
+| PCA dimensionality reduction | 63 components retain 90.05% of training variance |
+| K-Means moving/stationary ARI (training) | 0.9891 |
+| K-Means moving/stationary ARI (held-out testing) | 0.9973 |
+| Ward moving/stationary ARI (2,000 training windows) | 1.0000 |
+| PCA-only logistic regression (test macro F1) | 0.9220 |
+| PCA + cluster distances (test macro F1) | 0.9219 |
+
+The clustering results reflect broad moving and stationary activity groups rather than six-activity classification accuracy. The cluster-distance comparison shows no reliable improvement under the tested configuration. Small differences in Logistic Regression performance may vary across numerical environments.
 
 ## Data source
 
