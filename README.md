@@ -6,9 +6,9 @@ AAI 501, University of San Diego. Instructor: David Friesen.
 
 | Name | Contribution |
 |---|---|
-| Francois Lubin | (to be filled in) |
+| Francois Lubin | Classification and feature selection. Data setup and checks, baseline models, volunteer-wise tuning, feature selection, and per-volunteer error analysis (Notebooks 01, 02, 02b); Methods and Results sections for classification and feature selection |
 | Lernik Avetisyan | PCA, K-Means and Ward hierarchical clustering, cluster-distance classification, and participant-aware validation |
-| Alex Denbaugh | (to be filled in) |
+| Alex Denbaugh | Neural network (MLP) comparison with the other models; assembling the final report (introduction, related work, discussion, limitations, references) and leading the presentation |
 
 We compare classification, clustering, and feature selection methods for recognizing six
 activities (walking, walking upstairs, walking downstairs, sitting, standing, laying) from
