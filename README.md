@@ -39,6 +39,7 @@ smartphone accelerometer and gyroscope features.
 |---|---|
 | `01_baseline_models.ipynb` | Data checks; baseline logistic regression, k-NN, SVM, random forest, gradient boosting; confusion matrices |
 | `02_tuning_and_feature_selection.ipynb` | Volunteer-wise tuning (GroupKFold); accuracy per test volunteer; random forest feature ranking with and without removing correlated features; accuracy vs. number of features |
+| `02b_volunteer_error_analysis.ipynb` | Why test volunteers 9 and 10 score lowest: per-person confusion matrices, error types, errors over time, phone-orientation (gravity) features |
 | `03_clustering_and_pca.ipynb` | PCA (90% variance), K-Means and Ward clustering, moving/stationary grouping, held-out participant evaluation, and cluster-distance classification |
 
 ### Running the PCA and clustering notebook
