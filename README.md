@@ -67,6 +67,10 @@ smartphone accelerometer and gyroscope features.
 
 "Decorrelated" skips any feature with |correlation| > 0.8 to one already selected.
 
+## Per-volunteer analysis (Notebook 02b)
+
+Test accuracy ranged from about 83% (volunteer 10) to over 99% (volunteer 24), so the person matters more than the model. Volunteer 9's sitting and standing look almost identical in phone orientation; volunteer 10 had a ~20-second stretch of sitting with an unusual phone tilt that models labeled as standing.
+
 ## PCA and clustering results (9 held-out test volunteers where applicable)
 
 | Analysis | Result |
