@@ -56,6 +56,8 @@ smartphone accelerometer and gyroscope features.
 | Random forest | 0.929 | 0.927 |
 | k-nearest neighbors | 0.880 | 0.877 |
 
+After volunteer-wise tuning (Notebook 02), the SVM reached 95.6% accuracy (C = 100, gamma = 0.0001), the best single result in the project.
+
 ## Feature selection results (logistic regression, unseen test volunteers)
 
 | Features kept | Plain RF ranking | Decorrelated RF ranking |
