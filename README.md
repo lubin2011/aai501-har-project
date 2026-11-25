@@ -41,6 +41,7 @@ smartphone accelerometer and gyroscope features.
 | `02_tuning_and_feature_selection.ipynb` | Volunteer-wise tuning (GroupKFold); accuracy per test volunteer; random forest feature ranking with and without removing correlated features; accuracy vs. number of features |
 | `02b_volunteer_error_analysis.ipynb` | Why test volunteers 9 and 10 score lowest: per-person confusion matrices, error types, errors over time, phone-orientation (gravity) features |
 | `03_clustering_and_pca.ipynb` | PCA (90% variance), K-Means and Ward clustering, moving/stationary grouping, held-out participant evaluation, and cluster-distance classification |
+| 04_neural_network.ipynb | Neural network (MLP): baseline and architecture variants (shallow, deep, L2-regularized); per-volunteer accuracy; sitting vs. standing errors; MLP on 561 features, 150 decorrelated features, and 63 PCA components |
 
 ### Running the PCA and clustering notebook
 
