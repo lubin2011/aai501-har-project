@@ -89,6 +89,17 @@ Test accuracy ranged from about 83% (volunteer 10) to over 99% (volunteer 24), s
 
 The clustering results reflect broad moving and stationary activity groups rather than six-activity classification accuracy. The cluster-distance comparison shows no reliable improvement under the tested configuration. Small differences in Logistic Regression performance may vary across numerical environments.
 
+## Neural network (MLP) results (9 unseen test volunteers)
+
+| Model | Features | Accuracy | Macro F1 |
+|---|---|---|---|
+| MLP (128, 64), alpha = 0.01 | 561 (all) | 0.947 | 0.947 |
+| MLP (128, 64) | 561 (all) | 0.944 | 0.944 |
+| MLP (128, 64) | 150 decorrelated | 0.940 | 0.940 |
+| MLP (128, 64) | 63 PCA components | 0.916 | 0.916 |
+
+All MLP variants scored within about half a point of each other, and none outperformed logistic regression (95.5%) or the tuned SVM (95.6%). Sitting vs. standing accounts for about half of all MLP errors.
+
 ## Data source
 
 Reyes-Ortiz, J., Anguita, D., Ghio, A., Oneto, L., & Parra, X. (2013). *Human activity
